@@ -1,0 +1,7 @@
+select *
+FROM employees
+WHERE hire_date =
+(
+    select max(hire_date)
+    FROM employees
+);
