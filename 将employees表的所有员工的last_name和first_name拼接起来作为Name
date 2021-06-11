@@ -1,0 +1,3 @@
+select concat(last_name," ",first_name) 
+as Name 
+from employees;
