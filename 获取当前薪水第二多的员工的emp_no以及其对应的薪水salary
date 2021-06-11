@@ -1,0 +1,9 @@
+select emp_no, salary
+from salaries
+where to_date='9999-01-01'
+and
+salary = (SELECT salary
+FROM salaries
+WHERE to_date = '9999-01-01'
+GROUP BY salary
+ORDER BY salary DESC LIMIT 1,1 )
