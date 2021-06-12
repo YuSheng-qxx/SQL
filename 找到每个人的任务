@@ -1,0 +1,4 @@
+select person.id, person.name, task.content
+from person
+left join task
+on person.id = task.person_id;
